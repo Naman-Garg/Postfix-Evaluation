@@ -1,5 +1,8 @@
+//Implementation of postfix evaluation
 #include<bits/stdc++.h>
 using namespace std;
+
+//function for postfix evaluation
 int postfix_eval(string str)
 {
      stack < int > s1;
@@ -18,6 +21,7 @@ int postfix_eval(string str)
                s1.push(digit);
                i--;
           }
+          //postfix evaluation
           else{
                top = s1.top();
                s1.pop();
@@ -45,6 +49,7 @@ int postfix_eval(string str)
      }
      cout << s1.top();
 }
+//Driver code
 int main()
 {
      int t;
